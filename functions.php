@@ -30,7 +30,7 @@ function zaman_customizar_register($wp_customize){
         'description' => 'If you interested for update your header area, you can do it here.',
     ));
     $wp_customize->add_setting('zaman_logo', array(
-        'default' => get_bloginfo('template_directory') . 'img/logo.png',
+        'default' => get_bloginfo('template_directory') . '/img/logo.png',
     ));
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'zaman_logo', array(
         'lebel' => 'Logo Upload',
