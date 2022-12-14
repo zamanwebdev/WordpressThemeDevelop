@@ -33,6 +33,7 @@ function zaman_add_google_fonts(){
 
 // Theme Function
 function zaman_customizar_register($wp_customize){
+    //Header Area Function
     $wp_customize->add_section('zaman_header_area', array(
         'title' =>__('Header Area', 'syedzaman'),
         'description' => 'If you interested for update your header area, you can do it here.',
@@ -46,6 +47,26 @@ function zaman_customizar_register($wp_customize){
         'setting' => 'zaman_logo',
         'section' => 'zaman_header_area',
     )));
+    //Menu Position Option
+    $wp_customize->add_section('zaman_menu_option', array(
+        'title' => __('Menu Position Option', 'syedzaman'),
+        'description' => 'If you interested to change your menu position you can do it.'
+      ));
+      $wp_customize->add_setting('zaman_menu_position', array(
+        'default' => 'right_menu',
+      ));
+      $wp_customize-> add_control('zaman_menu_position', array(
+        'label' => 'Menu Position',
+        'description' => 'Select your menu position',
+        'setting' => 'zaman_menu_position',
+        'section' => 'zaman_menu_option',
+        'type' => 'radio',
+        'choices' => array(
+          'left_menu' => 'Left Menu',
+          'right_menu' => 'Right Menu',
+          'center_menu' => 'Center Menu',
+        ),
+      ));
 
     
 }
