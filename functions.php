@@ -67,10 +67,26 @@ function zaman_customizar_register($wp_customize){
           'center_menu' => 'Center Menu',
         ),
       ));
+    //Footer Option
+    $wp_customize->add_section('zaman_footer_option', array(
+      'title' => __('Footer Option', 'syedzaman'),
+      'description' => 'If you interested to change or update your footer settings you can do it.'
+    ));
+    $wp_customize->add_setting('zaman_copyright_section', array(
+      'default' => '&copy; Copyright 2022 | Zaman',
+    ));
+    $wp_customize-> add_control('zaman_copyright_section', array(
+      'label' => 'Copyright Text',
+      'description' => 'If need you can update your copyright text from here',
+      'setting' => 'zaman_copyright_section',
+      'section' => 'zaman_footer_option',
+    ));
 
     
 }
 add_action('customize_register', 'zaman_customizar_register');
+
+
 
 // Menu Register
 register_nav_menu( 'main_menu', __('Main Menu', 'syedzaman') );
