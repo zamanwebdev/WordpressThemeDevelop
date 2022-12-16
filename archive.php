@@ -1,15 +1,14 @@
 <?php
-/*
-* This is main template file 
-*/
-
-  get_header();
+    /*
+    * This is archive template file 
+    */
+    get_header(); 
 
 ?>
-    
-    
-    
-    <section id="body_area">
+
+
+<h1>this is archive tamplate</h1>
+  <section id="body_area">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -19,7 +18,7 @@
     </div>
   </section>
 
-  <?php
+<?php
     // footer.php file include code is Bellow
     get_footer(); 
-  ?>
+?>
