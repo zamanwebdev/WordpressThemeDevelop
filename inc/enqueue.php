@@ -20,6 +20,6 @@ add_action( 'wp_enqueue_scripts', 'zaman_css_js_file_caling');
 
 // Google Fonts Enqueue
 function zaman_add_google_fonts(){
-    wp_enqueue_style('zaman_google_fonts', 'https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Oswald&display=swap', false);
+    wp_enqueue_style('zaman_google_fonts', 'https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:wght@400;700&display=swap', false);
   }
   add_action('wp_enqueue_scripts', 'zaman_add_google_fonts');
