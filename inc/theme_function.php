@@ -50,6 +50,15 @@ function zaman_customizar_register($wp_customize){
       'section' => 'zaman_footer_option',
     ));
 
+    $wp_customize->add_setting('zaman_copyright_link', array(
+      'default' => '&copy; Copyright 2022 | Zaman',
+    ));
+    $wp_customize-> add_control('zaman_copyright_link', array(
+      'label' => 'Copyright Web Link',
+      'description' => 'If need you can update your copyright Web Link from here',
+      'setting' => 'zaman_copyright_link',
+      'section' => 'zaman_footer_option',
+    ));
     
 }
 add_action('customize_register', 'zaman_customizar_register');
