@@ -18,10 +18,8 @@
           <div id="comments_area">
           	<?php comments_template(); ?>
           </div>
-          
-
-          
         </div>
+        
         <div class="col-md-3">
            <?php get_sidebar(); ?>
         </div>
