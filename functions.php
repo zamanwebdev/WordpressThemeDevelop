@@ -6,6 +6,9 @@
 // All default theme function is here 
 include_once('inc/default.php');
 
+// Adding Custom Post
+include_once('inc/custom_post.php');
+
 // Theme CSS and jQuery File Calling
 include_once('inc/enqueue.php');
 
@@ -18,3 +21,5 @@ include_once('inc/menu_register.php');
 // Widgets Register
 include_once('inc/widgets_register.php');
 
+// Shortcode Register
+include_once('inc/shortcode.php');

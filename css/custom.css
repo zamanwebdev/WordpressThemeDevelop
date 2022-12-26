@@ -1,11 +1,21 @@
 /*=======================================
  Common CSS
 ========================================*/
+:root{
+  --pink:#ea1a70;
+  --blog:#fff;
+  --footertop:#292929;
+  --footermain:#292929;
+  --btextcolor:black;
+  --headerBackground:white;
+}
+
 body {
     /*font-family: "Kaisei Decol", serif;*/
     font-family: "Roboto", sans-serif;
     font-size: 15px;
     line-height: 1.5em;
+    color: var(--btextcolor);
   }
 
 p {
@@ -25,6 +35,7 @@ p {
   }
   img {
     max-width: 100%;
+    height: auto;
   }
 
 img.logo {
@@ -34,7 +45,7 @@ img.logo {
 
 a.redmore,
 input[type="submit"].submit {
-  background: #ea1a70;
+  background: var(--pink);
   border: 0px;
   color: #fff;
   font-size: 15px;
@@ -47,6 +58,15 @@ input[type="submit"].submit {
 a.redmore:hover,
 input[type="submit"].submit:hover {
   background: #262626;
+}
+
+.button{
+  background: var(--pink);
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
 }
   
   /*=======================================
@@ -68,6 +88,7 @@ input[type="submit"].submit:hover {
   #header_area {
     padding: 0px 0 15px;
     box-shadow: 0 3px 10px #ddd;
+    background: var(--headerBackground);
   }
   
   #header_area .col-md-9 ul {
@@ -96,7 +117,7 @@ input[type="submit"].submit:hover {
     text-decoration: none;
   }
   #header_area .col-md-9 ul li a:hover {
-    background: #ea1a70;
+    background: var(--pink);
     color: #fff;
   }
   
@@ -127,7 +148,7 @@ input[type="submit"].submit:hover {
     color: #262626;
   }
   #header_area .col-md-9 ul li:hover a {
-    background: #ea1a70;
+    background: var(--pink);
     color: #fff;
   }
   #header_area .col-md-9 ul li:hover ul li a {
@@ -148,7 +169,7 @@ input[type="submit"].submit:hover {
     left: 200px;
   }
   #header_area .col-md-9 ul li ul li:hover a {
-    background: #ea1a70;
+    background: var(--pink);
     color: #fff;
   }
   #header_area .col-md-9 ul ul li:hover ul li a {
@@ -156,7 +177,7 @@ input[type="submit"].submit:hover {
     color: #fff;
   }
   #header_area .col-md-9 ul ul li ul li a:hover {
-    background: #ea1a70;
+    background: var(--pink);
     color: #fff;
   }
 
@@ -197,7 +218,7 @@ input[type="submit"].submit:hover {
 #body_area .blog_area {
   width: 100%;
   margin-bottom: 17px;
-  background: rgb(243, 243, 243);
+  background: var(--blog);
   padding: 15px;
 }
 #body_area .post_thumb {
@@ -227,7 +248,7 @@ input[type="submit"].submit:hover {
   transition: 0.5s;
 }
 #body_area .post_details h2 a:hover {
-  color: #ea1a70;
+  color: var(--pink);
 }
 
 /*===========================================
@@ -235,7 +256,7 @@ input[type="submit"].submit:hover {
 ===========================================*/
 #archive_title,
 #search_title {
-  background: #ea1a70;
+  background: var(--pink);
   padding: 15px;
   margin-bottom: 20px;
 }
@@ -261,11 +282,11 @@ input[type="submit"].submit:hover {
   text-transform: uppercase;
 }
 .error_page p {
-  color: #ea1a70;
+  color: var(--pink);
   margin-bottom: 0;
 }
 .error_page a.homepage {
-  background: #ea1a70;
+  background: var(--pink);
   color: #fff;
   margin-bottom: 0;
   text-decoration: none;
@@ -288,8 +309,8 @@ input[type="submit"].submit:hover {
   padding: 10px;
 }
 .error_search input[type="submit"] {
-  background: #ea1a70;
-  border: 1px solid #ea1a70;
+  background: var(--pink);
+  border: 1px solid var(--pink);
   padding: 10px;
   margin: 0;
   color: #fff;
@@ -312,7 +333,7 @@ input[type="submit"].submit:hover {
   font-size: 30px;
   margin-bottom: 0;
   line-height: 1em;
-  /*border-left: 5px solid #ea1a70;*/
+  /*border-left: 5px solid var(--pink);*/
   padding-left: 10px;
 }
 .child_sidebar input[type="search"] {
@@ -321,8 +342,8 @@ input[type="submit"].submit:hover {
   padding: 10px;
 }
 .child_sidebar button[type="submit"] {
-  background: #ea1a70;
-  border: 1px solid #ea1a70;
+  background: var(--pink);
+  border: 1px solid var(--pink);
   padding: 10px;
   margin: 0;
   color: #fff;
@@ -351,7 +372,7 @@ input[type="submit"].submit:hover {
   text-decoration: none;
 }
 .child_sidebar ul li a:hover {
-  color: #ea1a70;
+  color: var(--pink);
 }
 .child_sidebar a.tag-cloud-link {
   color: #fff;
@@ -363,7 +384,7 @@ input[type="submit"].submit:hover {
   margin-bottom: 5px;
 }
 .child_sidebar a.tag-cloud-link:hover {
-  background: #ea1a70;
+  background: var(--pink);
 }
 
 
@@ -373,7 +394,7 @@ input[type="submit"].submit:hover {
 #page_nav {
 }
 #page_nav p.pages {
-  background: #ea1a70;
+  background: var(--pink);
   color: #fff;
   padding: 5px 10px;
 }
@@ -382,7 +403,7 @@ input[type="submit"].submit:hover {
   padding: 0 5px;
 }
 #page_nav .page-numbers {
-  background: #ea1a70;
+  background: var(--pink);
   color: #fff;
   display: inline-block;
   text-decoration: none;
@@ -399,7 +420,7 @@ input[type="submit"].submit:hover {
   Footer Area Styling
 ===========================================*/
 #footer {
-  background: #292929;
+  background: var(--footertop);
   padding: 40px 0 20px;
   color: #fff;
   border-bottom: 1px solid #ddd;
@@ -412,7 +433,7 @@ input[type="submit"].submit:hover {
   Copyright Area Styling
 ===========================================*/
 #copyright_area {
-  background: #292929;
+  background: var(--footermain);
   padding: 20px 0;
   color: #fff;
   text-align: center;
@@ -577,4 +598,19 @@ input[type="submit"].submit:hover {
 }
 .comment-form .comment-form-cookies-consent label {
   display: inline;
+}
+
+/*Theme Service area styling*/
+#service_area {
+  padding: 45px 0;
+}
+#service_area .child_service {
+  background: #ddd;
+  box-shadow: 0 0 10px #ddd;
+  padding: 15px;
+  border-radius: 15px;
+}
+#service_area .child_service img {
+  width: 100%;
+  margin: 0 0 15px;
 }

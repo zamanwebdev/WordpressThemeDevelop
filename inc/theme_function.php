@@ -59,6 +59,91 @@ function zaman_customizar_register($wp_customize){
       'setting' => 'zaman_copyright_link',
       'section' => 'zaman_footer_option',
     ));
-    
+
+    // Theme Color
+      $wp_customize-> add_section('zaman_colors', array(
+        'title' => __('Theme Color', 'syedzaman'),
+        'description' => 'If need you can change your theme color.',
+      ));
+
+      $wp_customize ->add_setting('zaman_bg_color', array(
+        'default' => '#ffffff',
+      ));
+      $wp_customize->add_control( new WP_Customize_color_control($wp_customize, 'zaman_bg_color', array(
+        'label' => 'Background Color',
+        'section' => 'zaman_colors',
+        'settings' => 'zaman_bg_color',
+      )));
+      //Header Background Color
+      $wp_customize ->add_setting('header_background', array(
+        'default' => '#fff',
+      ));
+      $wp_customize->add_control( new WP_Customize_color_control($wp_customize, 'header_background', array(
+        'label' => 'Header Background Color',
+        'section' => 'zaman_colors',
+        'settings' => 'header_background',
+      )));
+      //Read More Button and Header Menu hove color
+      $wp_customize ->add_setting('zaman_primary_color', array(
+        'default' => '#ea1a70',
+      ));
+      $wp_customize->add_control( new WP_Customize_color_control($wp_customize, 'zaman_primary_color', array(
+        'label' => 'Primary Color',
+        'section' => 'zaman_colors',
+        'settings' => 'zaman_primary_color',
+      )));
+      //Blog Body Background Color
+      $wp_customize ->add_setting('zaman_blog_color', array(
+        'default' => '#fff',
+      ));
+      $wp_customize->add_control( new WP_Customize_color_control($wp_customize, 'zaman_blog_color', array(
+        'label' => 'Blog Body Background Color',
+        'section' => 'zaman_colors',
+        'settings' => 'zaman_blog_color',
+      )));
+      //Footer Top Background
+      $wp_customize ->add_setting('footer_top_background', array(
+        'default' => '#292929',
+      ));
+      $wp_customize->add_control( new WP_Customize_color_control($wp_customize, 'footer_top_background', array(
+        'label' => 'Footer Top Background Color',
+        'section' => 'zaman_colors',
+        'settings' => 'footer_top_background',
+      )));
+      //Footer Main Background
+      $wp_customize ->add_setting('footer_main_background', array(
+        'default' => '#292929',
+      ));
+      $wp_customize->add_control( new WP_Customize_color_control($wp_customize, 'footer_main_background', array(
+        'label' => 'Footer Main Background Color',
+        'section' => 'zaman_colors',
+        'settings' => 'footer_main_background',
+      )));
+      //Body Text Color
+      $wp_customize ->add_setting('body_text_color', array(
+        'default' => 'black',
+      ));
+      $wp_customize->add_control( new WP_Customize_color_control($wp_customize, 'body_text_color', array(
+        'label' => 'Body Text Color',
+        'section' => 'zaman_colors',
+        'settings' => 'body_text_color',
+      )));
+      
+
 }
 add_action('customize_register', 'zaman_customizar_register');
+
+function ali_theme_color_cus(){
+  ?>
+  <style>
+    body{background: <?php echo get_theme_mod('zaman_bg_color'); ?>}
+    :root{ --btextcolor:<?php echo get_theme_mod('body_text_color'); ?>}
+    :root{ --headerBackground:<?php echo get_theme_mod('header_background'); ?>}
+    :root{ --pink:<?php echo get_theme_mod('zaman_primary_color'); ?>}
+    :root{ --blog:<?php echo get_theme_mod('zaman_blog_color'); ?>}
+    :root{ --footertop:<?php echo get_theme_mod('footer_top_background'); ?>}
+    :root{ --footermain:<?php echo get_theme_mod('footer_main_background'); ?>}
+  </style>
+  <?php 
+}
+add_action('wp_head', 'ali_theme_color_cus');
