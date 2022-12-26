@@ -6,6 +6,11 @@
 
 get_header(); ?>
 
+<div class="slider">
+  <div>I am a slide.</div>
+  <div>I am another slide.</div>
+</div>
+
   <section id="service_area">
     <div class="container">
       <div class="row">
